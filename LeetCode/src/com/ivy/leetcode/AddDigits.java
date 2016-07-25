@@ -3,6 +3,8 @@ package com.ivy.leetcode;
 public class AddDigits {
 
 	/**
+	 * 258.AddDigits
+	 * 
 	 * Given a non-negative integer num, repeatedly add all its digits until the
 	 * result has only one digit.
 	 * 
@@ -14,7 +16,7 @@ public class AddDigits {
 	public static void main(String[] args) {
 		Solution s = new Solution();
 
-		int num = s.addDigits(100);
+		int num = s.addDigits2(100);
 		System.out.println(num);
 	}
 
@@ -30,9 +32,9 @@ public class AddDigits {
 		}
 
 		// Method 2
+		// Could you do it without any loop/recursion in O(1) runtime?
 		public int addDigits2(int num) {
-
-			return num;
+			return (num - 1) % 9 + 1;
 		}
 	}
 }
